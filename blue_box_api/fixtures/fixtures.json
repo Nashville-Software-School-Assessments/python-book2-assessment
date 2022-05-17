@@ -1,0 +1,284 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$dv70XGQf1H15T9HKi2BdrP$q/7uKKMhBh3eM0qumiw3ogYoGacWv1LLbDyTroV4JYg=",
+      "last_login": "2022-05-17T15:49:31Z",
+      "is_superuser": false,
+      "username": "larry",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-17T15:46:57Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$ueQB32UbHElJIlqFRaHXN2$iUXKRSRnbGEeIWiARtqTdcL5o4xZCfdUIJQgOnwo0do=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "moe",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-17T17:00:00.260Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$co2VxPZJV6psEDxBi8kinx$CcECo7sxXXNPYI/oDAumTXj11z/a+97DgC2zhP+ivZM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "curly",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-17T17:00:41.170Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authtoken.token",
+    "pk": "0ffa67a387c6b98a8e8165c2115032139af33cdc",
+    "fields": {
+      "user": 2,
+      "created": "2022-05-17T17:00:55.417Z"
+    }
+  },
+  {
+    "model": "authtoken.token",
+    "pk": "78c1b0485a3b3f5084ff78982de9fc338b074922",
+    "fields": {
+      "user": 1,
+      "created": "2022-05-17T16:58:03.331Z"
+    }
+  },
+  {
+    "model": "authtoken.token",
+    "pk": "fbc4991f0116bbce44ed9188c6bee36f77efcefc",
+    "fields": {
+      "user": 3,
+      "created": "2022-05-17T17:01:00.512Z"
+    }
+  },
+  {
+    "model": "blue_box_api.box",
+    "pk": 1,
+    "fields": {
+      "location": "123 Road Dr, Nashville, TN 37201",
+      "business_name": "CVS"
+    }
+  },
+  {
+    "model": "blue_box_api.box",
+    "pk": 2,
+    "fields": {
+      "location": "146 Maker Way, Nashville, TN 37201",
+      "business_name": "Wendy's"
+    }
+  },
+  {
+    "model": "blue_box_api.box",
+    "pk": 3,
+    "fields": {
+      "location": "404 Not Found St, Nashville, TN 37201",
+      "business_name": "WalMart"
+    }
+  },
+  {
+    "model": "blue_box_api.rental",
+    "pk": 1,
+    "fields": {
+      "due_date": "2022-05-27",
+      "movie": 1,
+      "user": 1
+    }
+  },
+  {
+    "model": "blue_box_api.rental",
+    "pk": 2,
+    "fields": {
+      "due_date": "2022-02-01",
+      "movie": 7,
+      "user": 1
+    }
+  },
+  {
+    "model": "blue_box_api.rental",
+    "pk": 3,
+    "fields": {
+      "due_date": "2023-12-31",
+      "movie": 9,
+      "user": 2
+    }
+  },
+  {
+    "model": "blue_box_api.movie",
+    "pk": 1,
+    "fields": {
+      "name": "Star Wars Episode IV: A New Hope",
+      "description": "Lucas ipsum dolor sit amet leia darth lando kenobi skywalker mandalorians secura padmé darth antilles. Darth droid jango binks endor vader ackbar dagobah dagobah. Ackbar yavin sidious wedge hoth watto hutt jinn. Wampa grievous darth skywalker calrissian mon jinn. Kenobi leia hutt antilles. Padmé mace qui-gonn endor darth windu grievous mon. Mon jade sith kenobi hutt. Sidious wookiee mon antilles organa kenobi leia owen obi-wan. Darth skywalker moff ponda alderaan ventress ewok. Tusken raider wampa padmé yavin hutt sebulba solo skywalker calrissian.\r\n\r\nVader chewbacca owen anakin. Sidious calrissian darth boba. Anakin jade chewbacca mandalore luuke windu skywalker darth. R2-d2 organa jango hutt. Tusken raider endor kashyyyk yoda naboo jango. Anakin leia chewbacca tatooine jango chewbacca darth kenobi c-3po. Dagobah darth windu skywalker ewok hutt. Solo windu maul zabrak. Solo hutt moff solo hutt chewbacca. Lando bothan hutt hutt leia. Mace r2-d2 antilles mandalorians darth. Ewok organa boba tusken raider. Jawa skywalker wicket jango jinn palpatine gamorrean.",
+      "year_released": 1977
+    }
+  },
+  {
+    "model": "blue_box_api.movie",
+    "pk": 2,
+    "fields": {
+      "name": "Star Wars Episode V: The Empire Strikes Back",
+      "description": "Lucas ipsum dolor sit amet baba cade ackbar wookiee mara fett binks dooku darth ewok. Windu dantooine kamino coruscant lars baba moff. Hutt palpatine watto darth kessel. Kenobi skywalker skywalker solo palpatine skywalker skywalker boba. Owen antilles organa kessel windu mothma mandalorians tatooine. Cade obi-wan thrawn jinn padmé. Hutt jinn darth antilles biggs mace jinn tatooine leia. Twi'lek han mustafar skywalker. Fett vader mara skywalker hutt fisto solo. Darth darth sebulba endor hutt. Skywalker dantooine mandalorians yoda leia mon.\r\n\r\nOrgana dooku skywalker c-3po windu gamorrean. Antilles solo moff dagobah. Solo twi'lek antilles qui-gon luuke. Moff mace han darth ackbar moff darth. Lando yoda fisto antilles. Antilles obi-wan antilles hutt mandalorians. Skywalker mace grievous utapau mara kashyyyk fisto antilles. Cade fisto c-3p0 leia kessel vader kenobi mothma. Dagobah dantooine chewbacca organa darth dooku. Skywalker moff calamari darth aayla yoda. Grievous wicket darth darth endor ahsoka naboo. Naboo antilles jinn gonk solo secura lobot.",
+      "year_released": 1980
+    }
+  },
+  {
+    "model": "blue_box_api.movie",
+    "pk": 3,
+    "fields": {
+      "name": "Star Wars Episode VI: Return of the Jedi",
+      "description": "Lucas ipsum dolor sit amet jinn jabba amidala jinn obi-wan ben anakin darth skywalker sidious. Droid fett skywalker mon palpatine organa darth obi-wan padmé. Leia organa mandalorians gamorrean solo kamino darth dagobah. Hutt skywalker ackbar hutt gamorrean darth mustafar. Antilles darth luke antilles hutt c-3po anakin dagobah. Ponda kashyyyk mustafar yoda. Skywalker hutt vader jawa darth aayla secura. Organa skywalker mustafar yoda calamari binks moff chewbacca skywalker. Mothma amidala sidious vader darth fett wicket.\r\n\r\nHutt grievous windu wedge palpatine. Maul coruscant tatooine hutt skywalker bespin qui-gon. Wicket chewbacca calrissian palpatine obi-wan grievous grievous solo vader. Kit biggs owen ben skywalker luke darth. Moff maul aayla moff antilles antilles. Lando dagobah darth moff gonk padmé darth moff luuke. Moff hutt coruscant ackbar k-3po gonk amidala yoda dagobah. Darth kessel ackbar solo ackbar moff palpatine. Hutt kenobi hutt jinn windu lobot lars dagobah. Grievous sebulba obi-wan darth mustafar dooku moff k-3po ventress.",
+      "year_released": 1983
+    }
+  },
+  {
+    "model": "blue_box_api.movie",
+    "pk": 4,
+    "fields": {
+      "name": "Star Wars Episode I: The Phantom Menace",
+      "description": "Lucas ipsum dolor sit amet rattatak deliah solo aparo roos woostoid ralter nautolan tof corran. Unu yaddle juvex fel kasan briqualon. Besalisk er'kit kal vong ansuroer lowbacca fel fel. Draethos skywalker yoda dashade md-5. Dressellian jade theelin shi'ido mace darth wharl. Kathol y'bith moor rakata yuzzum melodie unduli falleen tarpals. Darth klaatu gordin oswaft motti disra jabba. Elom zabrak luminara vao lannik mustafarian shawda rune. Omwati dunhausen wirutid askajian shaak tano. Padmé ackbar mothma skirata pau'an sola endocott togorian p'w'eck.\r\n\r\nJarael wilhuff qrygg thrackan omas. Celegian emtrey momaw lyn. T'landa zann tion quence durron allie qui-gon d8 antilles. Mirax valorum tharin mygeeto dak tono max amanin. Grodin airen wharl yavin nar bollux jawa carlist. Utapaun calamari ugnaught hobbie kastolar bespin wilhuff skywalker sulorine. Coway barabel organa mimbanite jubnuk troig. Maul thakwaash kessel needa sabé yané. Thrackan hissa zam billaba argazdan maximilian thistleborn padmé gordin. Desann allana rishii polis farlander tavion fisto hoojib.",
+      "year_released": 1999
+    }
+  },
+  {
+    "model": "blue_box_api.movie",
+    "pk": 5,
+    "fields": {
+      "name": "Star Wars Episode II: Attack of the Clones",
+      "description": "Lucas ipsum dolor sit amet bren cathar duro rodian teneniel chirrpa max saffa zann droch. Nute hypori senesca geonosian habassa sing kyle aparo iego. Rhen wirutid gev antilles organa isard mas axmis. T'landa yuuzhan greedo nikto x2 senesca fett irek cracken. Bren nunb sy sal-solo shmi secura annoo snootles gunray. Nal dalonbian organa ansionian gricho skywalker cad y'bith max. Jax jade garm ferroans zabrak. Leia ponda yané charal zabrak gungan quelli jacen. Farlax vel qel-droma sullustan. Wicket yuuzhan tython moff kashyyyk hoth roonan lah.\r\n\r\nQrygg shistavanen stereb mandalore kessel iktotchi fortuna chistori sarn. Naberrie jarael nal lars lars kalarba saurin. Fey'lya amedda ishi kaleesh omwati pau'an. Carnor yavin vuffi klivian mon c-3p0 abrion iego. Nien rakata jabba snivvian yarael. Abyssin iv sikan oola. Kit feeorin gorax ubb wharl gavyn coruscant nagai. Var x'ting mygeeto binks voxyn moddell subterrel moff sio. Salacious amidala ord sikan. Solo lytton subterrel klaatu shistavanen ig-88 davin. Binks juvex rukh sulorine hoth moff.",
+      "year_released": 2002
+    }
+  },
+  {
+    "model": "blue_box_api.movie",
+    "pk": 6,
+    "fields": {
+      "name": "Star Wars Episode III: Revenge of the Sith",
+      "description": "Lucas ipsum dolor sit amet aka yavin quadrinaros rotta tharen ansuroer togorian tchuukthai ziro raynar. Droopy rakata aka glymphid naberrie senesca moore roonan. Mimbanite aparo antilles kalarba dalonbian bothawui reach. Woostoid x'ting rex haako. Gricho derlin hutt zann bormea cerean axmis. Arkanian klatooinian sifo-dyas jobal salacious ozzel thrackan. Cracken polis shaak glymphid ismaren massa. Mimbanite mandell lando karrde teevan kiffar. Mara quelli bib gorith darklighter. Unduli latter nautolan gricho h'nemthean squib.\r\n\r\nMccool skywalker yoda nass senex fortuna. Meridian greeata han hutta. Gunray panaka jerec subterrel. Aruzan aayla tarkin bib. Jabiimas hutt pa'lowick vima-da-boda bail lando choka cody. Alderaan mayagil c-3p0 unu raa ysanne. Yuzzum ozzel kuat shaddaa. Yevetha shimrra mirialan melodie. Raa raynar rendar walon tahiri ric ryn. Yaka vong vong yuzzum epicanthix skywalker rahm. Dashade jinn noa p'w'eck castell twi'lek jar wicket ansuroer. Lars skywalker solo kasan. Nadd corellia subterrel tatooine corran til timoliini biggs ozzel.",
+      "year_released": 2005
+    }
+  },
+  {
+    "model": "blue_box_api.movie",
+    "pk": 7,
+    "fields": {
+      "name": "Star Wars Episode VII: The Force Awakens",
+      "description": "Lucas ipsum dolor sit amet depa arcona kamino yoda poggle moff givin cracken geonosian sidious. Dengar thisspiasian gorith skywalker thul. Til felth bollux vader jade bib grodin. Tib tagge umbaran chiss kor-uj rotta zam terrik yoda. Latter freedon tano letaki qu kenobi. Ben fett yevetha ima-gun nunb kowakian oppo. Cerean hssis mccool tenel kendal. Rishii mirax vader -1b solo. Md-5 boss halla sulorine quelli mustafar yarael bimm yavin. Golda devaronian bail c'baoth leia vel saché sidious. Maris ongree ric vella trandoshan.\r\n\r\n-lom chiss aruzan luminara. Cb-99 anthos shistavanen jabba cal gev. Jobal cracken zabrak dantari jubnuk kathol xexto yuuzhan luke. Vor bib arkanis ansion. Chewbacca ryn boba brak biggs ssi-ruuk. Emtrey wessell thul chewbacca kurtzen. Hobbie mod luuke cadavine. P'w'eck keshiri lars nar jabiimas di fisto. Plagueis garm organa saurin malastare mirax ubb arkanian. Jubnuk kaminoan yaka thul selkath piell quermian. Ig-88 annoo onimi deliah cade desolous yavin obi-wan fortuna. Plo ansuroer ackbar kendal.",
+      "year_released": 2015
+    }
+  },
+  {
+    "model": "blue_box_api.movie",
+    "pk": 8,
+    "fields": {
+      "name": "Star Wars Episode VIII: The Last Jedi",
+      "description": "Lucas ipsum dolor sit amet evazan naberrie whitesun jacen amanin mace -1b tano balosar droch. Wicket givin solo rattataki. Doldur subterrel ishi unu jobal leia. Sern vau rebo dunwell fode squib. Zekk solo mantell whiphid cody gamorrean. Tharin falleen darth boba senex lama max thrella. Tsavong mohc lando x2 jacen abrion. Dexter gilad tibor thisspias xizor kast. Mustafar ima-gun keshiri su juvex sy. Qui-gon dalonbian luminara kobok tusken raider wesell dug sidious. Fey'lya durron hoth bibble. Givin bertroff motti sly kit gunray r5-d4.\r\n\r\nMandell vao finis selonian nunb rugor sebulba chewbacca. Roonan whiphid selonian antilles darth. Skywalker tapani naberrie wharl felth moff. Asajj mohc croke solo nilgaard yowza sikan warrick neimoidia. Tib droch klatooinian evocii zeltron kiffar ubese subterrel. Chazrach voxyn qui-gonn feeorin. Teevan ackbar xappyh dunhausen yoda su windu momaw. Mirta dantooine dressellian shawda myneyrsh nar bossk colton. Vodran mod tenel rakata roan jax. Selkath bothawui airen evazan saffa. Dantooine ysanne desann gilad.",
+      "year_released": 2017
+    }
+  },
+  {
+    "model": "blue_box_api.movie",
+    "pk": 9,
+    "fields": {
+      "name": "Star Wars Episode IX: The Rise of Skywalker",
+      "description": "Lucas ipsum dolor sit amet antilles cornelius maul darth skywalker togruta gilad hapan boba barabel. Habassa kaleesh triclops organa oppo seerdon cal raa yuzzem. Yaddle tusken raider axmis r2-d2 chirrpa taun fett thisspiasian vivenda. Nar kubaz olié darth palpatine aruzan solo windu cad. Mygeeto echani kobok ruwee solo xanatos malastare. Gordin orus organa aruzan yowza chazrach yoda terrik gank. Polis gand gado paaerduag ti y'bith wicket darth. Mirialan lah salacious stereb thul windu x1 fosh antilles.\r\n\r\nValorum duros warrick darth saurin. Naberrie shado thakwaash altyr vella raymus skywalker. Mygeeto senex x2 biggs. Kota massans massans golda tyber sabé tyranus cathar hapan. Geonosis kor-uj cb-99 zuggs darpa. Saleucami dorvalla umbaran klatooinian saurin porkins bel obi-wan teek. Davin fosh nautolan emtrey. Neimoidia ubese fortuna abregado cerea hoth hutt t88. Isolder vagaari typho bib ben emtrey. Moff wharl saurin padmé tharen vulptereen lars. Rattatak arkanian wampa caamasi gorith cerea chewbacca.",
+      "year_released": 2019
+    }
+  },
+  {
+    "model": "blue_box_api.moviebox",
+    "pk": 1,
+    "fields": {
+      "box": 1,
+      "movie": 4
+    }
+  },
+  {
+    "model": "blue_box_api.moviebox",
+    "pk": 2,
+    "fields": {
+      "box": 1,
+      "movie": 5
+    }
+  },
+  {
+    "model": "blue_box_api.moviebox",
+    "pk": 3,
+    "fields": {
+      "box": 1,
+      "movie": 6
+    }
+  },
+  {
+    "model": "blue_box_api.moviebox",
+    "pk": 4,
+    "fields": {
+      "box": 2,
+      "movie": 1
+    }
+  },
+  {
+    "model": "blue_box_api.moviebox",
+    "pk": 5,
+    "fields": {
+      "box": 2,
+      "movie": 2
+    }
+  },
+  {
+    "model": "blue_box_api.moviebox",
+    "pk": 6,
+    "fields": {
+      "box": 2,
+      "movie": 3
+    }
+  },
+  {
+    "model": "blue_box_api.moviebox",
+    "pk": 7,
+    "fields": {
+      "box": 3,
+      "movie": 7
+    }
+  },
+  {
+    "model": "blue_box_api.moviebox",
+    "pk": 8,
+    "fields": {
+      "box": 3,
+      "movie": 8
+    }
+  },
+  {
+    "model": "blue_box_api.moviebox",
+    "pk": 9,
+    "fields": {
+      "box": 3,
+      "movie": 9
+    }
+  }
+]
