@@ -35,16 +35,16 @@ class RentalViewTests(APITestCase):
         """
         
         for rental in Rental.objects.all():
-            actual = RentalSerializer(rental)
+            expected = RentalSerializer(rental)
             response = self.client.get(f'/rentals/{rental.id}')
             self.assertEqual(
-                response.status_code,
                 status.HTTP_200_OK,
+                response.status_code,
                 format_message("HINT: RentalView retrieve does not return a 200. Check the method for errors")
             )
             self.assertEqual(
+                expected.data,
                 response.data,
-                actual.data,
                 format_message("HINT: RentalView retrieve does not return the expected rental. Are you `get`-ing by the right id?")
             )
 
@@ -56,11 +56,14 @@ class RentalViewTests(APITestCase):
         rental_id = Rental.objects.first().id
         response = self.client.delete(f'/rentals/{rental_id}')
         self.assertEqual(
-            response.status_code,
             status.HTTP_204_NO_CONTENT,
+            response.status_code,
             format_message("HINT: RentalView destroy does not return the correct status either complete the code or check the status returned by the Response")
         )
-        with self.assertRaises(Rental.DoesNotExist):
+        with self.assertRaises(
+            Rental.DoesNotExist,
+            msg=format_message("HINT: The Rental destroy method did not successfully delete the rental")
+        ):
             Rental.objects.get(pk=rental_id)
 
     @check_for_assertion_error
@@ -74,24 +77,24 @@ class RentalViewTests(APITestCase):
         response = self.client.post('/rentals', rental_data, format='json')
 
         self.assertEqual(
-            response.status_code,
             status.HTTP_201_CREATED,
+            response.status_code,
             format_message("HINT: The create method did not return a 201. What is the status of the Response")
         )
 
         self.assertIsNotNone(response.data['id'])
 
         new_rental = Rental.objects.get(pk=response.data['id'])
-        actual = RentalSerializer(new_rental)
+        expected = RentalSerializer(new_rental)
         self.assertEqual(
+            expected.data,
             response.data,
-            actual.data,
             format_message("HINT: The create method should return the serialized data for the new rental object")
         )
 
         self.assertEqual(
-            new_rental.movie_id,
             rental_data['movie'],
+            new_rental.movie_id,
             format_message("HINT: The movie added to the rental does not match the movie passed to the create method")
         )
 
@@ -104,15 +107,15 @@ class RentalViewTests(APITestCase):
 
             response = self.client.get("/rentals/my_rentals")
             self.assertEqual(
-                response.status_code,
                 status.HTTP_200_OK,
+                response.status_code,
                 format_message("HINT: The custom action did not return a 200. Check the method decorator and method name for errors. This should not be a detail route")
             )
 
             filtered = Rental.objects.filter(user=user)
-            actual = RentalSerializer(filtered, many=True)
+            expected = RentalSerializer(filtered, many=True)
             self.assertEqual(
+                expected.data,
                 response.data,
-                actual.data,
                 format_message("HINT: Make sure the rentals being returned are only for the logged in user")
             )

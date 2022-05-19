@@ -25,14 +25,14 @@ class BoxViewTests(APITestCase):
         """
         response = self.client.get("/boxes")
         self.assertEqual(
-            response.status_code,
             status.HTTP_200_OK,
+            response.status_code,
             format_message("HINT: Boxview list method did not return a 200 status. Are you able to get the list in postman?")
         )
 
         self.assertEqual(
-            len(response.data),
             Box.objects.count(),
+            len(response.data),
             format_message("HINT: BoxView list method did not return the expected number of objects. Are you getting all of the boxes?")
         )
 

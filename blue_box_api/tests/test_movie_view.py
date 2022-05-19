@@ -27,8 +27,8 @@ class MovieViewTests(APITestCase):
         response = self.client.get("/movies")
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(
-            len(response.data),
             Movie.objects.count(),
+            len(response.data),
             format_message("HINT: If the query parameter is not in the url, the method should return all movies")
         )
 
@@ -37,9 +37,13 @@ class MovieViewTests(APITestCase):
         """Test to filter movies by the box id"""
         for box in Box.objects.all():
             response = self.client.get(f"/movies?box_id={box.id}")
-            self.assertEqual(response.status_code, status.HTTP_200_OK)
             self.assertEqual(
-                len(response.data),
+                status.HTTP_200_OK,
+                response.status_code,
+                format_message("HINT: The movie retrieve method did not return a 200")
+            )
+            self.assertEqual(
                 Movie.objects.filter(boxes__id=box.id).count(),
+                len(response.data),
                 format_message("HINT: Make sure the list is correctly filtering by the box id")
             )
