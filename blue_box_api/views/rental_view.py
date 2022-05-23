@@ -20,7 +20,7 @@ class RentalView(ViewSet):
         serializer = RentalSerializer(rentals, many=True)
         return Response(serializer.data)
 
-    def destory(self, request, pk):
+    def destroy(self, request, pk):
         """Delete a single rental"""
         # TODO: Complete the destroy method
 
