@@ -8,7 +8,7 @@ Blue Box is a dvd rental company looking to get started in Nashville. Their deve
 
 ## Steps to start
 1. After cloning the repository, run `pipenv install && pipenv shell`
-2. Migrate the database: `python3 manage.py runserver`
+2. Migrate the database: `python3 manage.py migrate`
 3. Load the database" `python3 manage.py loaddata fixtures`
 4. Use Postman or Thunder Client to check the output of each method
 5. User Tokens to use:
